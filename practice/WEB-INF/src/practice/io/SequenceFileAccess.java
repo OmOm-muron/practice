@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class SequenceFileAccess {
-    private final String SEQUENCE_PATH = "C:\\Users\\banba\\git\\practice\\practice\\data\\sequence.txt";
+    private final String SEQUENCE_PATH = "D:\\eclipse\\git\\practice\\practice\\data\\sequence.txt";
     
     /**
      * シークエンスファイルの内容(シークエンス番号)を取得

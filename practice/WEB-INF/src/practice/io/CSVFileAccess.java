@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
  */
 
 public class CSVFileAccess {
-    private final String CSV_PATH = "C:\\Users\\banba\\git\\practice\\practice\\data\\diary.csv";
+    private final String CSV_PATH = "D:\\eclipse\\git\\practice\\practice\\data\\diary.csv";
     
     /**
      * CSVファイルの行数を取得<br>
