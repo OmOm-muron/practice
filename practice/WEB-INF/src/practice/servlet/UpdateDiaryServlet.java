@@ -31,7 +31,7 @@ public class UpdateDiaryServlet extends HttpServlet {
         }
         
         req.setAttribute("pageName", "更新");
-        RequestDispatcher rd = req.getRequestDispatcher("/jsp/update-diary.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/jsp/new-diary.jsp");
         rd.forward(req, rsp);
     }
     
@@ -58,7 +58,7 @@ public class UpdateDiaryServlet extends HttpServlet {
             DiaryUtil.updateDiary(diary);
             
             // メッセージをリクエストにバインド
-            req.setAttribute("message", "一行日記を1件更新しました。");
+            req.setAttribute("message", "一行日記を1件 更新 しました。");
         } catch (Exception e) {
             e.printStackTrace();
             throw new ServletException(e);

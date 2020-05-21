@@ -19,7 +19,7 @@ public class NewDiaryServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest req, HttpServletResponse rsp) throws IOException, ServletException {
         req.setCharacterEncoding("UTF-8");
-        req.setAttribute("pageName", "新規");
+        req.setAttribute("pageName", "登録");
         RequestDispatcher rd = req.getRequestDispatcher("/jsp/new-diary.jsp");
         rd.forward(req, rsp);
     }
@@ -56,14 +56,14 @@ public class NewDiaryServlet extends HttpServlet {
             sequenceFA.writeSequence(String.valueOf(id));
             
             // メッセージをリクエストにバインド
-            req.setAttribute("message", "一行日記を1件登録しました。");
+            req.setAttribute("message", "一行日記を1件 登録 しました。");
         } catch (Exception e) {
             e.printStackTrace();
             throw new ServletException(e);
         }
         
-        req.setAttribute("pageName", "新規");
-        RequestDispatcher rd = req.getRequestDispatcher("/jsp/complete.jsp");
+        req.setAttribute("pageName", "登録");
+        RequestDispatcher rd = req.getRequestDispatcher("/jsp/dummy.jsp");
         rd.forward(req, rsp);
     }
 }

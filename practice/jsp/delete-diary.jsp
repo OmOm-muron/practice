@@ -29,7 +29,7 @@
           </tr>
         </table>
         <input type="hidden" name="diaryid" value="<c:out value="${diary.id}"/>">
-        <input type="submit" value="削除">
+        <input type="submit" value="<c:out value="${pageName}"/>">
       </form>
       
       <br>

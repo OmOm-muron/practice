@@ -52,7 +52,7 @@ public class DeleteDiaryServlet extends HttpServlet {
             DiaryUtil.deleteDiary(diary);
             
             // メッセージをリクエストにバインド
-            req.setAttribute("message", "一行日記を1件削除しました。");
+            req.setAttribute("message", "一行日記を1件 更新 しました。");
         } catch (Exception e) {
             e.printStackTrace();
             throw new ServletException(e);

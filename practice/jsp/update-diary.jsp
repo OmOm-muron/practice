@@ -29,7 +29,7 @@
         </table>
         <input type="hidden" name="diaryid" value="<c:out value="${diary.id}"/>">
         <input type="hidden" name="date" value="<c:out value="${diary.date}"/>">
-        <input type="submit" value="更新">
+        <input type="submit" value="<c:out value="${pageName}"/>">
       </form>
     </main>
     

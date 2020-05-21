@@ -18,14 +18,14 @@
         <table>
           <tr>
             <th>タイトル</th>
-            <td><input type="text" name="title" size="20" autocomplete="off"></td>
+            <td><input type="text" name="title" size="20" autocomplete="off" value="<c:out value="${diary.title}"/>"></td>
           </tr>
           <tr>
             <th>内容</th>
-            <td><input type="text" name="content" size="60" autocomplete="off"></td>
+            <td><input type="text" name="content" size="60" autocomplete="off" value="<c:out value="${diary.content}"/>"></td>
           </tr>
         </table>
-        <input type="submit" value="登録">
+        <input type="submit" value="<c:out value="${pageName}"/>">
       </form>
       
       <br>

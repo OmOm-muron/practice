@@ -42,11 +42,6 @@ public class DiaryUtil {
                 String date = diaryElements[INDEX_DATE];
                 String content = diaryElements[INDEX_CONTENT];
                 
-                if (date.isBlank()) {
-                    // 日付が空なら削除済みなので非表示
-                    continue;
-                }
-                
                 // Diaryインスタンスを作成
                 Diary diary = new Diary();
                 diary.setId(id);

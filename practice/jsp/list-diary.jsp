@@ -16,7 +16,7 @@
       <h2 align="center"><c:out value="${pageName}"/></h2>
       <br>
       
-      <button onclick="location.href='/practice/new-diary'">新しい一言日記</button>
+      <button onclick="location.href='/practice/new-diary'">新しい一言日記を登録</button>
       <br>
       
       <c:forEach items="${diaryList}" var="diary">
