@@ -13,7 +13,7 @@
     <%@ include file="/html/header.html"%>
 
     <main>
-      <h2 align="center">削除</h2>
+      <h2 align="center"><c:out value="${pageName}"/></h2>
       <p>削除しますか？</p>
       <br>
       
@@ -33,7 +33,7 @@
       </form>
       
       <br>
-      <button onclick="/practice/list-diary">一覧に戻る</button>
+      <button onclick="location.href='/practice/list-diary'">一覧に戻る</button>
     </main>
   </body>
 

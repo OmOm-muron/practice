@@ -13,7 +13,7 @@
     <%@ include file="/html/header.html"%>
 
     <main>
-      <h2 align="center">一覧</h2>
+      <h2 align="center"><c:out value="${pageName}"/></h2>
       <p><c:out value="${message}"/></p>
       <br>
       

@@ -13,7 +13,7 @@
     <%@ include file="/html/header.html"%>
 
     <main>
-      <h2 align="center">一覧</h2>
+      <h2 align="center"><c:out value="${pageName}"/></h2>
       <br>
       
       <button onclick="location.href='/practice/new-diary'">新しい一言日記</button>

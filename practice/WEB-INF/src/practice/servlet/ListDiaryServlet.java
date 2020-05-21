@@ -27,6 +27,7 @@ public class ListDiaryServlet extends HttpServlet {
             throw new ServletException(e);
         }
         
+        req.setAttribute("pageName", "一覧");
         RequestDispatcher rd = req.getRequestDispatcher("/jsp/list-diary.jsp");
         rd.forward(req, rsp);
     }

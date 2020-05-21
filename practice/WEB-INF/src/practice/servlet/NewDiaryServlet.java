@@ -19,6 +19,7 @@ public class NewDiaryServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest req, HttpServletResponse rsp) throws IOException, ServletException {
         req.setCharacterEncoding("UTF-8");
+        req.setAttribute("pageName", "新規");
         RequestDispatcher rd = req.getRequestDispatcher("/jsp/new-diary.jsp");
         rd.forward(req, rsp);
     }
@@ -61,6 +62,7 @@ public class NewDiaryServlet extends HttpServlet {
             throw new ServletException(e);
         }
         
+        req.setAttribute("pageName", "新規");
         RequestDispatcher rd = req.getRequestDispatcher("/jsp/complete.jsp");
         rd.forward(req, rsp);
     }

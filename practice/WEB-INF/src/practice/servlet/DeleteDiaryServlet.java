@@ -30,6 +30,7 @@ public class DeleteDiaryServlet extends HttpServlet {
             throw new ServletException(e);
         }
         
+        req.setAttribute("pageName", "削除");
         RequestDispatcher rd = req.getRequestDispatcher("/jsp/delete-diary.jsp");
         rd.forward(req, rsp);
     }
@@ -57,6 +58,7 @@ public class DeleteDiaryServlet extends HttpServlet {
             throw new ServletException(e);
         }
         
+        req.setAttribute("pageName", "削除");
         RequestDispatcher rd = req.getRequestDispatcher("/jsp/complete.jsp");
         rd.forward(req, rsp);
     }

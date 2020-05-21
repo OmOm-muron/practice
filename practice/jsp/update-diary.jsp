@@ -13,18 +13,18 @@
     <%@ include file="/html/header.html"%>
 
     <main>
-      <h2 align="center">更新</h2>
+      <h2 align="center"><c:out value="${pageName}"/></h2>
       <br>
       
       <form action="/practice/update-diary" method="post">
         <table>
           <tr>
             <th>タイトル</th>
-            <td><input type="text" size="20" name="title" value="<c:out value="${diary.title}"/>"></td>
+            <td><input type="text" size="20" name="title" autocomplete="off" value="<c:out value="${diary.title}"/>"></td>
           </tr>
           <tr>
             <th>内容</th>
-            <td><input type="text" size="60" name="content" value="<c:out value="${diary.content}"/>"></td>
+            <td><input type="text" size="60" name="content" autocomplete="off" value="<c:out value="${diary.content}"/>"></td>
           </tr>
         </table>
         <input type="hidden" name="diaryid" value="<c:out value="${diary.id}"/>">
