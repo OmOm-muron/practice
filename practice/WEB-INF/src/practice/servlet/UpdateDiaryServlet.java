@@ -1,6 +1,8 @@
 package practice.servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -42,16 +44,21 @@ public class UpdateDiaryServlet extends HttpServlet {
         String diaryid = req.getParameter("diaryid");
         String title = req.getParameter("title");
         String content = req.getParameter("content");
-        String date = req.getParameter("date");
+        // String date = req.getParameter("date");
+        Date date = new Date();
         
         try {
             int id = Integer.parseInt(diaryid);
+            // 日付をStringに変換
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String dateStr = dateFormat.format(date);
             
             // 一行日記インスタンスを生成
             Diary diary = new Diary();
             diary.setId(id);
             diary.setTitle(title);
-            diary.setDate(date);
+            // diary.setDate(date);
+            diary.setDate(dateStr);
             diary.setContent(content);
             
             // 一行日記を更新

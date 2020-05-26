@@ -34,6 +34,23 @@ public class NewDiaryServlet extends HttpServlet {
         String content = req.getParameter("content");
         Date date = new Date();
         
+        if (title.isEmpty() || content.isEmpty()) {
+            // 未入力の場合はエラーとする
+            // 入力された情報を再度リクエストにバインド
+            Diary diary = new Diary();
+            diary.setTitle(title);
+            diary.setContent(content);
+            // リクエストにバインド
+            req.setAttribute("diary", diary);
+            req.setAttribute("pageName", "新規");
+            req.setAttribute("errorMessage", "タイトルと内容は両方入力してください。");
+            // 再度新規登録画面に戻る
+            RequestDispatcher rd = req.getRequestDispatcher("/jsp/new-diary.jsp");
+            rd.forward(req, rsp);
+            
+            return;
+        }
+        
         try {
             // 次のIDを取得
             int id = sequenceFA.readSequence();

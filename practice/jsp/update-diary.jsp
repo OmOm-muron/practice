@@ -17,7 +17,7 @@
       <br>
       
       <form action="/practice/update-diary" method="post">
-        <table>
+        <table border="1">
           <tr>
             <th>タイトル</th>
             <td><input type="text" size="20" name="title" autocomplete="off" value="<c:out value="${diary.title}"/>"></td>
@@ -29,6 +29,7 @@
         </table>
         <input type="hidden" name="diaryid" value="<c:out value="${diary.id}"/>">
         <input type="hidden" name="date" value="<c:out value="${diary.date}"/>">
+        <br>
         <input type="submit" value="更新">
       </form>
     </main>

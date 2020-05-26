@@ -15,10 +15,8 @@
     <main>
       <h2 align="center"><c:out value="${pageName}"/></h2>
       <p>削除しますか？</p>
-      <br>
-      
       <form action="/practice/delete-diary" method="post">
-        <table>
+        <table border="1">
           <tr>
             <th>タイトル</th>
             <td><c:out value="${diary.title}"/></td>
@@ -29,6 +27,7 @@
           </tr>
         </table>
         <input type="hidden" name="diaryid" value="<c:out value="${diary.id}"/>">
+        <br>
         <input type="submit" value="削除">
       </form>
       
